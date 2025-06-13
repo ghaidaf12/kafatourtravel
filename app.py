@@ -99,9 +99,18 @@ elif menu == "📝 Booking":
             st.success(f"Terima kasih {nama}, booking kamu untuk {jumlah} orang pada tanggal {tanggal} telah dicatat.")
 
 elif menu == "📌 Lokasi":
-    st.header("Lokasi Camp Riverside")
-    st.markdown("""
-    📍 Alamat: Cinumpang, Sukamaju, Kecamatan Kadudampit, Kabupaten Sukabumi, Jawa Barat  
-    🌐 [Lihat di Google Maps](https://maps.app.goo.gl/FgTYYGHrmkKitxAJ7)
-    """)
-    st.image("https://i.ibb.co/zGPdh1z/maps-preview.jpg", caption="Peta Lokasi Lembah Uyut", width=700)
+    st.header("Lokasi Lembah Uyut")
+
+# Alamat dengan link aktif
+st.markdown("""
+📍 **Alamat:** Cinumpang, Sukamaju, Kecamatan Kadudampit, Kabupaten Sukabumi, Jawa Barat  
+🌐 <a href="https://maps.app.goo.gl/FgTYYGHrmkKitxAJ7" target="_blank">🔗 Lihat di Google Maps</a>
+""", unsafe_allow_html=True)
+
+# Peta interaktif Google Maps (iframe embed)
+st.components.v1.iframe(
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31748.213705630525!2d106.92440408890623!3d-6.859735874193036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e683d259d3e6d05%3A0x88c86f7991d06b62!2sCinumpang%2C%20Kecamatan%20Kadudampit%2C%20Sukabumi%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1718271758296!5m2!1sid!2sid",
+    width=700,
+    height=450
+)
+
