@@ -1,6 +1,17 @@
 import streamlit as st
 from datetime import date
 
+# ===== HIDE DEFAULT STREAMLIT MENU, HEADER, FOOTER =====
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+# ===== PAGE SETUP =====
 st.set_page_config(page_title="Camp Riverside", layout="wide")
 
 # ===== Sidebar =====
@@ -19,10 +30,20 @@ menu = st.sidebar.radio("Navigasi", [
 # ===== Layout Main Page =====
 if menu == "🏡 Beranda":
     st.markdown("""
-    <h1 style='text-align: center; color: #2E8B57;'>🌲 Selamat Datang di Camp Riverside</h1>
-    <p style='text-align: center;'>Nikmati pengalaman camping dan susur sungai terbaik di kaki Gunung Salak</p>
+    <div style='background-color:#e8f5e9; padding:40px 20px; border-radius:12px;'>
+        <h1 style='text-align:center; color:#2e7d32;'>🌲 Selamat Datang di <b>Camp Riverside</b></h1>
+        <p style='text-align:center; font-size:18px;'>Nikmati pengalaman camping dan susur sungai terbaik di kaki Gunung Salak</p>
+    </div>
     """, unsafe_allow_html=True)
-    st.image("https://i.ibb.co/XZBps4X/hero-camp.jpg", use_column_width=True)
+
+    st.markdown("""<br><h4 style='text-align:center;'>Highlight Kegiatan</h4>""", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.image("https://i.ibb.co/9YHqWhh/camp1.jpg", caption="Area Tenda", use_container_width=True)
+    with col2:
+        st.image("https://i.ibb.co/WPgsZ7K/river1.jpg", caption="Susur Sungai", use_container_width=True)
+    with col3:
+        st.image("https://i.ibb.co/Kr03K4j/outbound.jpg", caption="Outbound", use_container_width=True)
 
 elif menu == "🧭 Tentang Kami":
     st.header("Tentang Camp Riverside")
@@ -42,7 +63,7 @@ elif menu == "🏕️ Aktivitas":
     ]
     for i, (nama, gambar) in enumerate(aktivitas):
         with cols[i]:
-            st.image(gambar, use_column_width=True)
+            st.image(gambar, use_container_width=True)
             st.markdown(f"### {nama}")
 
 elif menu == "🖼️ Galeri":
@@ -52,7 +73,7 @@ elif menu == "🖼️ Galeri":
         "https://i.ibb.co/pjzjM0s/camp2.jpg",
         "https://i.ibb.co/WPgsZ7K/river1.jpg",
         "https://i.ibb.co/zVPdytJ/about-camp.jpg"
-    ], width=300, caption=["Area Tenda", "Tepi Sungai", "Susur Sungai", "Suasana Alam"], use_column_width=False)
+    ], width=300, caption=["Area Tenda", "Tepi Sungai", "Susur Sungai", "Suasana Alam"], use_container_width=False)
 
 elif menu == "📋 Paket & Harga":
     st.header("Daftar Paket dan Harga")
@@ -83,4 +104,3 @@ elif menu == "📌 Lokasi":
     🌐 [Lihat di Google Maps](https://goo.gl/maps/xxxxxxxx)
     """)
     st.image("https://i.ibb.co/zGPdh1z/maps-preview.jpg", caption="Peta Lokasi Camp Riverside", width=700)
-
