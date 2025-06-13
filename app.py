@@ -18,9 +18,9 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 st.sidebar.image("https://i.ibb.co/PMKFFc9/camp-logo.png", width=150)
 st.sidebar.title("Camp Riverside")
 st.sidebar.markdown("""
-📍 Desa Sukarasa, Bogor, Jawa Barat  
+📍 Kadudampit, Sukabumi, Jawa Barat  
 📞 [WhatsApp](https://wa.me/62812xxxxxxx)  
-📸 [Instagram](https://instagram.com/camp.riverside)
+📸 [Instagram](https://instagram.com/kafatourtravel)
 """)
 
 menu = st.sidebar.radio("Navigasi", [
@@ -32,7 +32,7 @@ menu = st.sidebar.radio("Navigasi", [
 if menu == "🏡 Beranda":
     st.markdown("""
     <div style='background-color:#e8f5e9; padding:40px 20px; border-radius:12px;'>
-        <h1 style='text-align:center; color:#2e7d32;'>🌲 Selamat Datang di <b>Camp Riverside</b></h1>
+        <h1 style='text-align:center; color:#2e7d32;'>🌲 Selamat Datang di <b>Kafa Tour Travel</b></h1>
         <p style='text-align:center; font-size:18px;'>Nikmati pengalaman camping dan susur sungai terbaik di kaki Gunung Salak</p>
     </div>
     """, unsafe_allow_html=True)
@@ -101,7 +101,7 @@ elif menu == "📝 Booking":
 elif menu == "📌 Lokasi":
     st.header("Lokasi Camp Riverside")
     st.markdown("""
-    📍 Alamat: Desa Sukarasa, Kecamatan Pamijahan, Kabupaten Bogor, Jawa Barat  
-    🌐 [Lihat di Google Maps](https://goo.gl/maps/xxxxxxxx)
+    📍 Alamat: Cinumpang, Sukamaju, Kecamatan Kadudampit, Kabupaten Sukabumi, Jawa Barat  
+    🌐 [Lihat di Google Maps](https://maps.app.goo.gl/FgTYYGHrmkKitxAJ7)
     """)
-    st.image("https://i.ibb.co/zGPdh1z/maps-preview.jpg", caption="Peta Lokasi Camp Riverside", width=700)
+    st.image("https://i.ibb.co/zGPdh1z/maps-preview.jpg", caption="Peta Lokasi Lembah Uyut", width=700)
