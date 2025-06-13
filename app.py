@@ -19,9 +19,10 @@ st.sidebar.image("https://i.ibb.co/PMKFFc9/camp-logo.png", width=150)
 st.sidebar.title("Kafa Tour Travel")
 st.sidebar.markdown("""
 📍 *Kadudampit, Sukabumi, Jawa Barat*  
-📞 <a href="https://wa.me/62812xxxxxxx" target="_blank">📲 WhatsApp</a>  
-📸 <a href="https://instagram.com/kafatourtravel" target="_blank">📷 Instagram</a>
+📞 <a href="https://wa.me/62812xxxxxxx" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>  
+📸 <a href="https://instagram.com/kafatourtravel" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
 """, unsafe_allow_html=True)
+
 
 
 menu = st.sidebar.radio("Navigasi", [
