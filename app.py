@@ -1,6 +1,9 @@
 import streamlit as st
 from datetime import date
 
+# ===== PAGE CONFIG (WAJIB PALING ATAS) =====
+st.set_page_config(page_title="Camp Riverside", layout="wide")
+
 # ===== HIDE DEFAULT STREAMLIT MENU, HEADER, FOOTER =====
 hide_streamlit_style = """
     <style>
@@ -10,9 +13,6 @@ hide_streamlit_style = """
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-# ===== PAGE SETUP =====
-st.set_page_config(page_title="Camp Riverside", layout="wide")
 
 # ===== Sidebar =====
 st.sidebar.image("https://i.ibb.co/PMKFFc9/camp-logo.png", width=150)
@@ -24,7 +24,8 @@ st.sidebar.markdown("""
 """)
 
 menu = st.sidebar.radio("Navigasi", [
-    "🏡 Beranda", "🧭 Tentang Kami", "🏕️ Aktivitas", "🖼️ Galeri", "📋 Paket & Harga", "📝 Booking", "📌 Lokasi"
+    "🏡 Beranda", "🧭 Tentang Kami", "🏕️ Aktivitas", "🖼️ Galeri", 
+    "📋 Paket & Harga", "📝 Booking", "📌 Lokasi"
 ])
 
 # ===== Layout Main Page =====
