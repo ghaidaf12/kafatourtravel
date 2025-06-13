@@ -16,12 +16,13 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # ===== Sidebar =====
 st.sidebar.image("https://i.ibb.co/PMKFFc9/camp-logo.png", width=150)
-st.sidebar.title("Camp Riverside")
+st.sidebar.title("Kafa Tour Travel")
 st.sidebar.markdown("""
 📍 Kadudampit, Sukabumi, Jawa Barat  
-📞 [WhatsApp](https://wa.me/62812xxxxxxx)  
-📸 [Instagram](https://instagram.com/kafatourtravel)
-""")
+📞 <a href="https://wa.me/62812xxxxxxx" target="_blank">WhatsApp</a>  
+📸 <a href="https://instagram.com/kafatourtravel" target="_blank">Instagram</a>
+""", unsafe_allow_html=True)
+
 
 menu = st.sidebar.radio("Navigasi", [
     "🏡 Beranda", "🧭 Tentang Kami", "🏕️ Aktivitas", "🖼️ Galeri", 
@@ -47,9 +48,9 @@ if menu == "🏡 Beranda":
         st.image("https://i.ibb.co/Kr03K4j/outbound.jpg", caption="Outbound", use_container_width=True)
 
 elif menu == "🧭 Tentang Kami":
-    st.header("Tentang Camp Riverside")
+    st.header("Tentang Kafa Tour Travel")
     st.write("""
-    Camp Riverside adalah destinasi wisata alam yang menawarkan pengalaman berkemah, susur sungai, outbound,
+    Kafa Tour Travel adalah destinasi wisata alam yang menawarkan pengalaman berkemah, susur sungai, outbound,
     edukasi alam, dan kegiatan outdoor lainnya. Dikelola secara profesional dengan tetap mempertahankan nuansa alami.
     """)
     st.image("https://i.ibb.co/zVPdytJ/about-camp.jpg", width=600)
